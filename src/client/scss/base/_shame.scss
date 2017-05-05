@@ -1,0 +1,120 @@
+body {
+  background-color: $white;
+  color: $black;
+  background-image: url('../../img/pattern-1.svg');
+  overflow: visible !important;
+  overflow-x: hidden  !important;
+  max-height: inherit  !important;
+  font-family: Roboto,Helvetica,Arial,sans-serif;
+}
+.mdl-layout__container {
+  $factor: 1.07;
+  transform: scale($factor);
+  transform-origin: center;
+  .is-entered & {
+    transition: all .5s ease-out;
+    transform: scale(1);
+  }
+  position: relative;
+}
+html, body {
+  min-height: 100vh;
+}
+* {
+  box-sizing: border-box;
+}
+.r-content {
+  min-height: calc(100vh - #{$header-height} - #{$footer-height});
+  padding: 0 h-pc(1) 50px h-pc(1);
+  position: relative;
+  display: block;
+}
+
+.is-capped {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.r-generate-report, .r-submit-report {
+  margin: 12px 0;
+}
+
+.is-entered .r-loader-screen.is-active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: all;
+  opacity: 0.4;
+  transition: none !important;
+  .r-loader {
+    display: none;
+  }
+}
+
+
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.r-footer {
+  transform: translateY(50px);
+  opacity: 0;
+  &.r-footer--show {
+    transition: all 0.5s ease-out;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+h1 {
+  font-size: 38px;
+  @include large-up {
+    font-size: 46px;
+  }
+}
+
+.r-title {
+  margin: 0;
+  margin-top: 10px;
+}
+
+.mdl-tooltip {
+  position: absolute !important;
+  top: 0 !important;
+  left: 50% !important;
+  //transform: translate(-50%, -50%);
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
+
+  -ms-word-break: break-all !important;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all !important;
+  /* Instead use this non-standard one: */
+  word-break: break-word !important;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto !important;
+  -moz-hyphens: auto !important;
+  -webkit-hyphens: auto !important;
+  hyphens: auto !important;
+}
+.r-submit-report-dialog {
+  width: span-cols(15);
+  max-width: 650px;
+}

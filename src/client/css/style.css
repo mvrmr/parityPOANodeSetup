@@ -1,0 +1,106 @@
+/* Nav Bar Styles */
+
+/* EXAMPLE 2 (larger logo) - simply adjust top bottom padding to make logo larger */
+
+.nav-container .navbar-brand>img {
+ /* padding: 7px 15px;
+  margin-top: -8px;
+  width:12em;*/
+}
+
+.navbar-default .navbar-brand {
+  padding-bottom: 44px;
+      background-color: #013c5c;
+}
+
+.navbar-default, .navbar-header {
+      background-color: #013c5c !important;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color:white !important;
+  background-color: #013c5c;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-toggle .icon-bar
+ {
+background-color: #1683AB;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+  background-color:#013c5c;
+  color:#013c5c;
+}
+/* Nav Bar Styles */
+
+
+
+/* Log in Styles */
+
+body {
+  background-color: white;
+}
+
+h1 {
+   color: #053c59;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1683ab;
+}
+
+.btn-primary:hover {
+  background-color: #013c5c;
+
+}
+
+/* Login Style */
+
+/*Dashboard Main */
+#boi-monogram {
+  display: inline-block;
+
+}
+
+/*Dashboard Main */
+
+/*body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}*/

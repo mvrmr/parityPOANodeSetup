@@ -1,0 +1,17 @@
+/**
+ * Common styles used across the app by all components.
+ * This stylesheet shouldn't include any component-specific rule: those should be put into their own files
+**/
+@import 'base';
+@import 'modules';
+
+.bp-welcome {
+    background: white;
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.mdl-card {
+    width: 450px;
+}

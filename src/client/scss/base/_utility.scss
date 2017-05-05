@@ -1,0 +1,43 @@
+/* 	utility classes
+   ========================================================================== */
+.u-centered {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.u-full-background {
+  background-position: center;
+  background-size: cover;
+}
+
+.u-maxw {
+  height: 100%;
+  margin: 0 auto;
+  max-width: span-cols($grid-col-count, true);
+  width: 100%;
+}
+
+.u-container-padded {
+  padding: 0 h-pc(1);
+}
+
+.u-align-right {
+  display: block;
+  text-align: right;
+}
+.u-align-center {
+  display: block;
+  text-align: center;
+}
+
+.u-hidden {
+  display: none;
+}
+
+.u-centered-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}

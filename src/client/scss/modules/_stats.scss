@@ -1,0 +1,27 @@
+.r-stats-container {
+  display: flex;
+  justify-content: space-around;
+  @include xlarge-up {
+    justify-content: space-between;
+  }
+  flex-wrap: wrap;
+}
+.r-stats-card {
+  display: inline-block;
+  min-height: 175px;
+  width: 100%;
+  $m: 0.5;
+  margin: span-cols($m) 0 0 0;
+  @include medium-up {
+    width: 37%;
+  }
+  @include max-width {
+    width: 23%;
+    margin: span-cols($m, true) 0 0 0;
+  }
+  &:first-child {
+    .mdl-card__supporting-text {
+      font-size: 26px;
+    }
+  }
+}

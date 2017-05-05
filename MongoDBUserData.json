@@ -1,0 +1,32 @@
+use localDB;
+db.userprofiles.save(
+{
+    firstName: 'Mohan',
+    lastName:  'M',
+    middleName:  '',
+    userId: 'mohan@testfed.com',
+    roles:  ['admin'],
+    publicAddress:  'asPublicKeyec',
+    password:  'pwd',
+    passwordHash:  'pwdASHash',
+    encryptionKey:  'encryptKeyAS',
+    decryptionKey:  'decryptKeyAS',
+    salt:  'saltAS'
+}
+)
+
+db.userprofiles.save(
+{
+    firstName: 'Sridhrar',
+    lastName:  'I',
+    middleName:  '',
+    userId: 'sid@testfed.com',
+    roles:  ['admin'],
+    publicAddress:  'asPublicKeyec',
+    password:  'pwd',
+    passwordHash:  'pwdASHash',
+    encryptionKey:  'encryptKeyAS',
+    decryptionKey:  'decryptKeyAS',
+    salt:  'saltAS'
+}
+)

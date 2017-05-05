@@ -1,0 +1,19 @@
+{
+  "presets": ["es2015"],
+  "env": {
+    "production": {
+      "presets": [], //use babili for minifcation, as it understands native es6,
+      "plugins": ["remove-comments"],
+      "ignore": []
+    }
+  },
+  "plugins": [
+    ["transform-es2015-for-of", {
+      "loose": true
+    }],
+    ["remove-comments"]
+  ],
+  "ignore": [
+    "node_modules"
+  ]
+}

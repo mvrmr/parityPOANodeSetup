@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Application Test Page </title>
+  <!-- Bootstrap core CSS -->
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="fonts/css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+
+  <!-- Custom styling plus plugins -->
+  <link href="css/custom.css" rel="stylesheet">
+  <link href="css/icheck/flat/green.css" rel="stylesheet">
+  <link href="css/style-rest.css" rel="stylesheet">
+
+</head>
+
+<body class="nav-md footer_fixed">
+
+  <div class="container body">
+    <div class="main_container">
+
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+
+          <!-- menu prile quick info -->
+          <div class="profile">
+            <div class="profile_pic">
+              <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+            </div>
+            <div class="profile_info">
+              <span>Welcome,</span>
+              <h2>Tricky, Troy, <br/><span> &nbsp; <%= userRole %> </span> </h2>
+            </div>
+          </div>
+          <!-- /menu prile quick info -->
+
+          <!-- /menu footer buttons -->
+          <div class="sidebar-footer hidden-small">
+            <a data-toggle="tooltip" data-placement="top" title="Settings">
+              <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+              <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="Lock">
+              <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="Logout">
+              <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+            </a>
+          </div>
+          <!-- /menu footer buttons -->
+        </div>
+      </div>
+
+      <!-- top navigation -->
+
+      <!--       <link rel="import" href="partials/top-navbar.html">
+ -->
+      <div id="top_nav"></div>
+      <!-- page content -->
+      <div class="right_col" role="main">
+        <div class="">
+          <div class="page-title">
+            <div class="title_left">
+              <h3>
+                Application Test Page
+              </h3>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="x_panel animated fadeInDown">
+                <div class="x_title">
+                  <h2>Admin Options<small></small></h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Settings 1</a>
+                        </li>
+                        <li><a href="#">Settings 2</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <div class="row">
+                    <div class="col-md-12 inline-block">
+                      <p><a href="/api/getAcctBalances"><b>==>     Get All Local Ethereum Chain Accounts  <==</b></a> </p>
+                      <p><a href="/api/transferEther"><b>==> Transfer Ether from Acct[0] to Acct[1]   <==</b></a></p>
+                      <p> </p>
+                      <p> </p>
+                      <p> </p>
+                      <p> </p>
+                      <h3> <p><a href="/login"><b>LogOut</b></a></p>  </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- footer content -->
+        <footer>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+      <!-- /page content -->
+    </div>
+  </div>
+  <div id="custom_notifications" class="custom-notifications dsp_none">
+    <ul class="list-unstyled notifications clearfix" data-tabbed_notifications="notif-group">
+    </ul>
+    <div class="clearfix"></div>
+    <div id="notif-group" class="tabbed_notifications"></div>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <!-- bootstrap progress js -->
+  <script src="js/progressbar/bootstrap-progressbar.min.js"></script>
+  <script src="js/nicescroll/jquery.nicescroll.min.js"></script>
+  <!-- icheck -->
+  <script src="js/icheck/icheck.min.js"></script>
+  <!-- pace -->
+  <script src="js/pace/pace.min.js"></script>
+  <script src="js/custom.js"></script>
+  <!-- form validation -->
+  <script src="js/validator/validator.js"></script>
+  <script>
+    $(document).ready(function () {
+    });
+    // initialize the validator function
+    validator.message['date'] = 'not a real date';
+
+    // validate a field on "blur" event, a 'select' on 'change' event & a '.reuired' classed multifield on 'keyup':
+    $('form')
+      .on('blur', 'input[required], input.optional, select.required', validator.checkField)
+      .on('change', 'select.required', validator.checkField)
+      .on('keypress', 'input[required][pattern]', validator.keypress);
+
+    $('.multi.required')
+      .on('keyup blur', 'input', function () {
+        validator.checkField.apply($(this).siblings().last()[0]);
+      });
+
+    // bind the validation to the form submit event
+    //$('#send').click('submit');//.prop('disabled', true);
+
+    $('form').submit(function (e) {
+      e.preventDefault();
+      var submit = true;
+      // evaluate the form using generic validaing
+      if (!validator.checkAll($(this))) {
+        submit = false;
+      }
+
+      if (submit)
+        this.submit();
+      return false;
+    });
+
+    /* FOR DEMO ONLY */
+    $('#vfields').change(function () {
+      $('form').toggleClass('mode2');
+    }).prop('checked', false);
+
+    $('#alerts').change(function () {
+      validator.defaults.alerts = (this.checked) ? false : true;
+      if (this.checked)
+        $('form .alert').remove();
+    }).prop('checked', false);
+
+        /* $(function(){
+      $("#top_nav").load("partials/top-navbar.html"); 
+    });*/
+  </script>
+</body>
+
+</html>

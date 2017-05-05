@@ -1,0 +1,33 @@
+/*typography */
+h1,h2,h3,h4 {
+   color: #053c59;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1683ab;
+}
+
+.btn-primary:hover {
+  background-color: #013c5c;
+
+}
+
+
+/*typography
+
+
+/*Dashboard Main */
+#boi-monogram {
+  display: inline-block;
+  padding-right: 5px;
+  width: 50px;
+  height: 33px;
+
+}
+
+#boi-text-logo {
+      width: 7.4em !important;
+}
+
+/*Dashboard Main */
