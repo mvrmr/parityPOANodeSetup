@@ -7,7 +7,8 @@ var ctrlLogin = require('../controllers/login');
 
 router.get('/downLoadDashBoardData/:fileFolder/:fileSubFolder/:fileName', ctrlMisc.downLoadDashBoardData);
 router.get('/login', ctrlLogin.login);
-router.get('/', ctrlLogin.login);
+//router.get('/', ctrlLogin.login);
+router.get('/', ctrlLogin.adminPage);
 
 router.post('/verifylogin', ctrlLogin.verifyUserLogin);
 

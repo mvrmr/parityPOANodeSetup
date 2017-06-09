@@ -2,15 +2,15 @@ var express = require('express');
 var router = express.Router();
 
 var ctrlUsersAPI = require('../controllers/loginAPI');
-var DataContractAPI = require('../controllers/DataContractAPI');
+var miscAPI = require('../controllers/miscAPI');
 var ctrlmongoDbAPI = require('../controllers/mongoDbAPI');
 
 // MCC links
 router.post('/verifyloginAPI/', ctrlUsersAPI.verifyUserLoginAPI);
 
 // BOI MCC Data API links
-router.get('/getAcctBalances/', DataContractAPI.getAcctBalances);
-router.get('/transferEther/', DataContractAPI.transferEther);
+router.get('/getAcctBalances/', miscAPI.getAcctBalances);
+router.get('/transferEther/', miscAPI.transferEther);
 
 //Cached Data API links
 router.post('/getTranscriptDataFromMongoDB/', ctrlmongoDbAPI.getTranscriptDataFromMongoDB);

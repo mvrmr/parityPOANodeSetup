@@ -6,6 +6,10 @@ module.exports.login = function (req, res) {
   res.render('login', { title: 'MCC Login', CONST, userRole: req.body.userRole });
 };
 
+module.exports.adminPage = function (req, res) {
+  res.render('adminPage', { title: 'MCC Application Administration', userRole: "Application Admin"});  
+};
+
 // Verify the login and present over view screen based on the role
 module.exports.verifyUserLogin = function (req, res) {
   console.log("in login.js: module.exports.verifyUserLogin");
