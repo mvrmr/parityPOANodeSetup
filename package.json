@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "npm run backend",
+    "startxx": "npm run backend",
+    "start": "node ./src/tools/backend.js",
     "everything": "npm-run-all --silent --parallel backend frontend lint:watch",
     "backend": "./node_modules/.bin/nodemon --watch src --ext js --exec babel-node -- ./src/tools/backend.js",
     "frontend": "babel-node -- ./src/tools/frontend.js",
