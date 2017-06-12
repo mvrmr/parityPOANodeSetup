@@ -36,7 +36,8 @@ mongoose.model('Transcript', transcriptSchema, 'transcripts');
 
 var dbURI = SERVERCONFIG.DB;
 if (process.env.NODE_ENV === 'production') {
-  dbURI = process.env.MONGOLAB_URI;
+  //dbURI = process.env.MONGOLAB_URI;
+  dbURI = process.env.MONGODB_URI;
 }
 
 mongoose.connect(dbURI);
