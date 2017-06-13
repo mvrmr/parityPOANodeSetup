@@ -8,7 +8,7 @@ const SERVERPORT = CONST.BACKEND_SERVER_PORT;
 /**
  * BACK END SETUP
  */
-const port = SERVERPORT;
+const port = process.env.PORT || SERVERPORT;
 const onError = (error) => {
   if (error.syscall !== 'listen') {
     throw error;
