@@ -14,7 +14,7 @@ const ACCT0PASSPHRASE = '';  // pass phrase for Acct[0] / first account on the B
 // Ref: Parity Dev  'Other Default Account'    ==> 0x00296DeBe65f9F0f4c0D269939e061e4515594e4
 
 const ENABLE_CACHE = 'Y';   // Use data from MongoDB cash for DashBoard,  non 'Y' gets data from Ethereum Smart Contract
-const APPLICATION_SERVER_BACKEND_PORT = 6010;
+const APPLICATION_SERVER_BACKEND_PORT = process.env.PORT || 6010;
 const APPLICATION_SERVER_FRONTEND_PORT = 3010;
 
 // No changes needed below this for general server configuaration
