@@ -75,7 +75,7 @@
     "material-design-lite": "^1.2.1",
     "mockdate": "1.0.4",
     "node-sass": "^3.10.1",
-    "open": "0.0.5",
+    "open": "6.0.0",
     "postcss-loader": "0.11.0",
     "prompt": "1.0.0",
     "replace": "0.3.0",
